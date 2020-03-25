@@ -1,17 +1,7 @@
 
-K
-java:S1125·"(Remove the literal "true" boolean value.( Õ¿ûÿÿÿÿ8£ƒóõ.
-N
-java:S1602c",Remove useless curly braces around statement(ÇË®ûùÿÿÿÿ8£ƒóõ.
+O
+java:S1612®",Replace this lambda with a method reference.(ç¹¡úÿÿÿÿ8ë´÷‰‘.
 I
 java:S1612l",Replace this lambda with a method reference.(ë“Ìí8£ƒóõ.
-O
-java:S1481³",Remove this unused "result1" local variable.(ÒÇÌşÿÿÿÿ8£ƒóõ.
-u
-java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(›ÊØ8£ƒóõ.
-J
-java:S1612®",Replace this lambda with a method reference.(ë“Ìí8£ƒóõ.
-L
-java:S1125°")Remove the literal "false" boolean value.(´İù†ÿÿÿÿÿ8£ƒóõ.
 w
-java:S1104@"ZMake observableList a static final constant or non-public and provide accessors if needed.(Ù½©Æ8£ƒóõ.
+java:S1104A"ZMake observableList a static final constant or non-public and provide accessors if needed.(Ù½©Æ8ÔŸç‰‘.
