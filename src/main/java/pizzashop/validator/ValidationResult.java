@@ -13,7 +13,7 @@ public class ValidationResult {
 
     public boolean hasError()
     {
-        return (err.size() == 0 ? false : true);
+        return (err.size() != 0);
     }
     public void addErrorToList(ErrorPayment errorPayment)
     {
