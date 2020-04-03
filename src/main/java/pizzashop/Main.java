@@ -16,6 +16,7 @@ import pizzashop.model.PaymentType;
 import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
 import pizzashop.service.PizzaService;
+import pizzashop.validator.ValidatorService;
 
 
 import java.util.Optional;
@@ -28,7 +29,8 @@ public class Main extends Application {
 
         MenuRepository repoMenu=new MenuRepository();
         PaymentRepository payRepo= new PaymentRepository();
-        PizzaService service = new PizzaService(repoMenu, payRepo);
+        ValidatorService validatorService = new ValidatorService();
+        PizzaService service = new PizzaService(repoMenu, payRepo,validatorService);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/mainFXML.fxml"));
 

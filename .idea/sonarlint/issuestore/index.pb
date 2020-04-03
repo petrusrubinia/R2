@@ -35,3 +35,15 @@ j
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 Q
 !src/main/java/pizzashop/Main.java,d\7\d710b77068e128f035d497fc3878605971f031b5
+w
+G.idea/sonarlint/issuestore/9/5/9593d6c2aae59b75f1c5ffdb8bb3a549a0c0d8d6,8\8\88b47051de024fc102d5cd06e59683eafbbe6088
+c
+3src/main/java/pizzashop/validator/ErrorPayment.java,3\c\3c155db299408de84f10a53321acaeba698ffb4e
+g
+7src/main/java/pizzashop/validator/ValidationResult.java,d\2\d2e4b73547fd4f86b1638d8b08b83300eae933a4
+g
+7src/main/java/pizzashop/validator/ValidatorService.java,a\2\a2f7e4a330a81d9cd06ae4c74b953231ef91601b
+j
+:src/main/java/pizzashop/validator/ValidationException.java,0\e\0e7dde107fe0b6382ec27e698e0a9a4c4f3828e4
+e
+5src/test/java/pizzashop/service/PizzaServiceTest.java,f\4\f496bf34deff9b910e5c4b5fdd20fe2b239503b3
