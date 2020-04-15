@@ -14,4 +14,9 @@ public class ValidatorService {
             validationResult.addErrorToList(new ErrorPayment("amount","valiarea achitata nu este o valoare din intervalul[0.0,infinit)"));
 
     }
+
+    public void validateType(PaymentType type, ValidationResult validationResult) {
+        if(type != PaymentType.CARD && type != PaymentType.CASH)
+            validationResult.addErrorToList(new ErrorPayment("type","tipul de plata nu este unul valid"));
+    }
 }

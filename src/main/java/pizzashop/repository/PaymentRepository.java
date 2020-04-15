@@ -8,17 +8,24 @@ import pizzashop.model.PaymentType;
 
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
 public class PaymentRepository implements IPaymentRepository {
     static Logger log = Logger.getLogger(PaymentRepository.class.getName());
-    private static String filename = "data/payments.txt";
+    private static String filename;
     private List<Payment> paymentList;
 
-    public PaymentRepository(){
+    public PaymentRepository(String filename){
+        this.filename = filename;
         this.paymentList = new ArrayList<>();
+        readPayments();
+    }
+    public PaymentRepository(String filename, ArrayList list){
+        this.filename = filename;
+        this.paymentList = list;
         readPayments();
     }
 
@@ -75,7 +82,7 @@ public class PaymentRepository implements IPaymentRepository {
         BufferedWriter bw = null;
         try {
             bw = new BufferedWriter(new FileWriter(file));
-            for (Payment p:paymentList) {
+                for (Payment p:paymentList) {
                 log.debug(p.toString());
                 bw.write(p.toString());
                 bw.newLine();

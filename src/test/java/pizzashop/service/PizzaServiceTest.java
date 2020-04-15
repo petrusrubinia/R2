@@ -17,6 +17,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.Alphanumeric.class)
 class PizzaServiceTest {
     private PaymentType cashType;
     private PaymentType cardType;
@@ -33,7 +34,7 @@ class PizzaServiceTest {
 
         menuRepo = new MenuRepository();
         size =0;
-        payRepo = new PaymentRepository();
+        payRepo = new PaymentRepository("data/payments.txt");
         validatorService = new ValidatorService();
         pizzaService = new PizzaService(menuRepo, payRepo,validatorService);
         cashType = PaymentType.CASH;
@@ -54,6 +55,7 @@ class PizzaServiceTest {
 
     }
 
+
     @ParameterizedTest
     @ValueSource(ints = {1,2,3,4,5,6,7,8})
     void TC1_EC(int table)
@@ -64,7 +66,8 @@ class PizzaServiceTest {
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
     }
 
-    @RepeatedTest(5)
+
+    @RepeatedTest(2)
     void TC2_EC() //trebuie sa cada!
     {
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
@@ -142,5 +145,6 @@ class PizzaServiceTest {
 
     @AfterEach
     void tearDown() {
+        System.out.println("------------------------------------------------------------------------------------------");
     }
 }

@@ -28,7 +28,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         MenuRepository repoMenu=new MenuRepository();
-        PaymentRepository payRepo= new PaymentRepository();
+        PaymentRepository payRepo= new PaymentRepository("data/payments.txt");
         ValidatorService validatorService = new ValidatorService();
         PizzaService service = new PizzaService(repoMenu, payRepo,validatorService);
 

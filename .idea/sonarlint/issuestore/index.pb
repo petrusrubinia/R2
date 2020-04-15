@@ -47,3 +47,7 @@ j
 :src/main/java/pizzashop/validator/ValidationException.java,0\e\0e7dde107fe0b6382ec27e698e0a9a4c4f3828e4
 e
 5src/test/java/pizzashop/service/PizzaServiceTest.java,f\4\f496bf34deff9b910e5c4b5fdd20fe2b239503b3
+Z
+*src/main/resources/fxml/OrdersGUIFXML.fxml,4\8\48dffcdac12bf9fd7f5452db4164e730d7893485
+g
+7src/test/java/pizzashop/service/TestGetTotalAmount.java,7\3\735b4ca2a7a520b269b94f53f95312e11069656a

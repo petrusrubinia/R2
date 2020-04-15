@@ -36,10 +36,15 @@ public class PizzaService implements IPizzaService{
     }
 
     public double getTotalAmount(PaymentType type){
+        ValidationResult validationResult = new ValidationResult();
+        validator.validateType(type,validationResult);
+        validationResult.rejectIfHasErrors();
         double total=0.0f;
         List<Payment> l=getPayments();
-        if (l==null) return total;
-        if (l.isEmpty()) return total;
+        if (l==null)
+            return total;
+        if (l.isEmpty())
+            return total;
         for (Payment p:l){
             if (p.getType().equals(type))
                 total+=p.getAmount();
