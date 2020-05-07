@@ -9,16 +9,17 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class MenuRepository implements IMenuRepository{
-    private static String filename = "data/menu.txt";
+    private  String filename;
     private List<MenuDataModel> listMenu;
     static Logger log = Logger.getLogger(MenuRepository.class.getName());
 
 
-    public MenuRepository(){
+    public MenuRepository(String filename){
+        this.filename = filename;
         //default repository
     }
 
-    public void readMenu() throws IOException {
+    public void readMenu() {
         ClassLoader classLoader = MenuRepository.class.getClassLoader();
         File file = new File(classLoader.getResource(filename).getFile());
         this.listMenu= new ArrayList();

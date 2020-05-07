@@ -84,7 +84,7 @@ public class PaymentRepository implements IPaymentRepository {
             bw = new BufferedWriter(new FileWriter(file));
                 for (Payment p:paymentList) {
                 log.debug(p.toString());
-                bw.write(p.toString());
+                bw.write(p.getTableNumber()+ ","+p.getType() + ","+ p.getAmount());
                 bw.newLine();
             }
             bw.close();

@@ -3,6 +3,7 @@ package pizzashop.service;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import org.apache.log4j.Logger;
+import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
 
 import java.util.Optional;
@@ -52,11 +53,11 @@ public class PaymentAlert implements PaymentOperation {
         }
         if (result.get() == cardPayment) {
             cardPayment();
-            service.addPayment(tableNumber, PaymentType.CASH,totalAmount);
+            service.addPayment(new Payment(tableNumber, PaymentType.CASH,totalAmount));
             return "CARD";
         } else if (result.get() == cashPayment) {
             cashPayment();
-            service.addPayment(tableNumber, PaymentType.CARD,totalAmount);
+            service.addPayment(new Payment(tableNumber, PaymentType.CARD,totalAmount));
             return "CASH";
         } else {
             cancelPayment();

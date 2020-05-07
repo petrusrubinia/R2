@@ -51,3 +51,11 @@ Z
 *src/main/resources/fxml/OrdersGUIFXML.fxml,4\8\48dffcdac12bf9fd7f5452db4164e730d7893485
 g
 7src/test/java/pizzashop/service/TestGetTotalAmount.java,7\3\735b4ca2a7a520b269b94f53f95312e11069656a
+b
+2src/test/java/pizzashop/service/IntegrareRepo.java,b\4\b4c404005fb480b18cd49974ef7eb6c75d6b94c4
+u
+Esrc/test/java/pizzashop/repository/PaymentRepositoryTestWithMock.java,3\6\362df6d715d4cbfdfda55c2bbb6648989c361795
+m
+=src/test/java/pizzashop/service/PizzaServiceTestWithMock.java,3\a\3a8e99feedfa74c61f724e0b7bda96d8f518605e
+d
+4src/test/java/pizzashop/service/IntegrareDomain.java,4\8\48fe564e27c83fcddde64b8404a8545fb73d079d

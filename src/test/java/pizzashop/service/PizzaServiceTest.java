@@ -32,7 +32,7 @@ class PizzaServiceTest {
     @BeforeEach
     void setUp() {
 
-        menuRepo = new MenuRepository();
+        menuRepo = new MenuRepository( "data/menu.txt");
         size =0;
         payRepo = new PaymentRepository("data/payments.txt");
         validatorService = new ValidatorService();
@@ -62,7 +62,7 @@ class PizzaServiceTest {
     {
         amount = 24.0;
         size = payRepo.getAll().size();
-        pizzaService.addPayment(table,cashType,amount);
+        pizzaService.addPayment(new Payment(table,cashType,amount));
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
     }
 
@@ -71,7 +71,7 @@ class PizzaServiceTest {
     void TC2_EC() //trebuie sa cada!
     {
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
-            pizzaService.addPayment(30, cardType, amount);
+            pizzaService.addPayment(new Payment(30, cardType, amount));
         });
         System.out.println("TC2_EC: TABLE : 30" + validationException.getErrors());
     }
@@ -80,7 +80,7 @@ class PizzaServiceTest {
     void TC3_EC() //trebuie sa cada!!!
     {
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
-            pizzaService.addPayment(tableList.get(3),cashType,-30);
+            pizzaService.addPayment(new Payment(tableList.get(3),cashType,-30));
         });
         System.out.println("TC3_EC: AMOUNT -30" + validationException.getErrors());
 
@@ -91,7 +91,7 @@ class PizzaServiceTest {
     {
         size = payRepo.getAll().size();
         amount = 0.0;
-        pizzaService.addPayment(tableList.get(2),cardType,0.0);
+        pizzaService.addPayment(new Payment(tableList.get(2),cardType,0.0));
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
 
     }
@@ -106,7 +106,7 @@ class PizzaServiceTest {
     {
         size = payRepo.getAll().size();
         amount = 0.0;
-        pizzaService.addPayment(tableList.get(1),cashType,30.0);
+        pizzaService.addPayment(new Payment(tableList.get(1),cashType,30.0));
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
 
     }
@@ -116,7 +116,7 @@ class PizzaServiceTest {
     {
         size = payRepo.getAll().size();
         amount = 16.0;
-        pizzaService.addPayment(tableList.get(3),cardType,0.0);
+        pizzaService.addPayment(new Payment(tableList.get(3),cardType,0.0));
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
     }
     @Test
@@ -124,7 +124,7 @@ class PizzaServiceTest {
     {
         amount = 10.0;
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
-            pizzaService.addPayment(9,cardType,amount);
+            pizzaService.addPayment(new Payment(9,cardType,amount));
         });
         System.out.println("TC3_BVA : TABLE = 9"+ validationException.getErrors());
 
@@ -135,7 +135,7 @@ class PizzaServiceTest {
 
         amount = -0.1;
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
-            pizzaService.addPayment(9,cardType,amount);
+            pizzaService.addPayment(new Payment(9,cardType,amount));
         });
         System.out.println("TC11_BVA : AMOUNT = -0.1"+ validationException.getErrors());
 

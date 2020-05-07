@@ -10,6 +10,6 @@ import java.util.List;
 public interface IPizzaService {
     List<MenuDataModel> getMenuData() throws IOException;
     List<Payment> getPayments();
-    void addPayment(int table, PaymentType type, double amount);
+    void addPayment(Payment payment);
     double getTotalAmount(PaymentType type);
 }

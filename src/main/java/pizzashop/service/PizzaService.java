@@ -27,9 +27,9 @@ public class PizzaService implements IPizzaService{
 
     public List<Payment> getPayments(){return payRepo.getAll(); }
 
-    public void addPayment(int table, PaymentType type, double amount){
+    public void addPayment(Payment payment){
+
         ValidationResult validationResult = new ValidationResult();
-        Payment payment= new Payment(table, type, amount);
         validator.validate(payment,validationResult);
         validationResult.rejectIfHasErrors();
         payRepo.add(payment);

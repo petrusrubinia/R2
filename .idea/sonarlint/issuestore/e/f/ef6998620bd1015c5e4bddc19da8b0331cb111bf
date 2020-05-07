@@ -1,13 +1,13 @@
 
+R
+java:S2209"5Change this instance-reference to a static reference.(ÒÝ™¬8µ¼–¡—.
+R
+java:S2209"5Change this instance-reference to a static reference.(ÒÝ™¬8å»¤¢—.
 B
 java:S3010"%Remove this assignment of "filename".(ÒÝ™¬8Ñ‡¦¢—.
 B
 java:S3010"%Remove this assignment of "filename".(ÒÝ™¬8µ¼–¡—.
-R
-java:S2209"5Change this instance-reference to a static reference.(ÒÝ™¬8å»¤¢—.
 Q
 java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8Ñ‡¦¢—.
 ‹
 java:S1319"oThe type of the "list" object should be an interface such as "List" rather than the implementation "ArrayList".(‡Ý§,8Ñ‡¦¢—.
-R
-java:S2209"5Change this instance-reference to a static reference.(ÒÝ™¬8µ¼–¡—.
