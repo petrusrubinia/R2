@@ -71,7 +71,7 @@ class PizzaServiceTest {
     void TC2_EC() //trebuie sa cada!
     {
         ValidationException validationException = assertThrows(ValidationException.class, () ->{
-            pizzaService.addPayment(new Payment(30, cardType, amount));
+            pizzaService.addPayment(new Payment(2, null, amount));
         });
         System.out.println("TC2_EC: TABLE : 30" + validationException.getErrors());
     }
@@ -116,7 +116,7 @@ class PizzaServiceTest {
     {
         size = payRepo.getAll().size();
         amount = 16.0;
-        pizzaService.addPayment(new Payment(tableList.get(3),cardType,0.0));
+        pizzaService.addPayment(new Payment(tableList.get(7),cardType,0.0));
         assertEquals(size+1 , payRepo.getAll().size(), "dimensiunea nu coincide ");
     }
     @Test
